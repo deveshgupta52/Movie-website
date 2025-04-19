@@ -1,3 +1,4 @@
+//first
 var searchInput = document.getElementById("search");
 var suggestionBox = document.querySelector(".suggestion");
 let movieContainer=document.querySelector(".movie-container");
