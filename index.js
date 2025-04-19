@@ -110,7 +110,7 @@ async function loadFirst() {
         "The Silence of the Lambs"
     ];
     var random=Math.floor(Math.random()*20);
-    const res= await fetch(`http://www.omdbapi.com/?&apikey=${apiKey}&s=${movieList[random]}`);
+    const res= await fetch(`https://www.omdbapi.com/?&apikey=${apiKey}&s=${movieList[random]}`);
     const data=await res.json();
     
    
@@ -121,7 +121,7 @@ async function loadFirst() {
 loadFirst();
 async function suggestion(query){
     
-    const res= await fetch(`http://www.omdbapi.com/?&apikey=${apiKey}&s=${query}`);
+    const res= await fetch(`https://www.omdbapi.com/?&apikey=${apiKey}&s=${query}`);
     const data=await res.json();
     suggestionBox.innerHTML = ""; 
     if(data.Search){
@@ -161,7 +161,7 @@ async function suggestion(query){
 }
 
 async function search(query){
-    const res= await fetch(`http://www.omdbapi.com/?&apikey=${apiKey}&s=${query}`);
+    const res= await fetch(`https://www.omdbapi.com/?&apikey=${apiKey}&s=${query}`);
     const data=await res.json();
     console.log(data.Search)
    
